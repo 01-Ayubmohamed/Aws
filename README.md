@@ -22,19 +22,19 @@ private EC2 -> NAT gateway -> internet
 ---
 ## Screenshots 
 ### VPC Architecture 
-![VPC Architecture](../Screenshots/VPC%20Architecture.png)
+![VPC Architecture](/screenshots/VPC%20Architecture.png)
 ---
 
 ### VPC Resource map 
-![VPC Resource map ](../Screenshots/VPC%20Resource%20map.png)
+![VPC Resource map ](/screenshots/VPC%20Resource%20map.png)
 
 ---
 ### Batsion host SSH 
-![Bation host SSH](../Screenshots/Bastion%20host%20SSH.png)
+![Bation host SSH](/screenshots/Bastion%20host%20SSH.png)
 
 ---
 ### Private EC2 instance 
-![Private EC2 instance](../Screenshots/Private%20EC2%20SSH.png)
+![Private EC2 instance](/screenshots/Private%20EC2%20SSH.png)
 
 ---
 ### CloudWatch Metrics 
@@ -42,4 +42,8 @@ private EC2 -> NAT gateway -> internet
 
 ---
 ## What I Learned
-
+1. Through this prject I was as able to understand the core principles of AWS and how it incorporates and ensures secutiy at every level. 
+2. Public and Private subnets are configured and determined by route table not EC2. 
+3. That a bsation host can be used to isolate and secure a private instance. 
+4. You could deploy a NAT gateway as i means of accesing the internet witohut exposing private resources. 
+5. The genral flow of traffic from VPC to IGW to NAT gateways. 
