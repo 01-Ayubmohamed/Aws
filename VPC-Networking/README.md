@@ -38,7 +38,7 @@ private EC2 -> NAT gateway -> internet
 
 ---
 ### CloudWatch Metrics 
-![CloudWatch](//VPC-Networking/asgmt-1-screenshots/CloudWatch.png)
+![CloudWatch](/VPC-Networking/asgmt-1-screenshots/CloudWatch.png)
 
 ---
 ## What I Learned
