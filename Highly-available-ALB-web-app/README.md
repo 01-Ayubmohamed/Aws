@@ -34,7 +34,7 @@ Create a Target Group
 Register both EC2 instances
 Configure a health check on the root path /, showing all instnaces health status. 
 ### ALB Listeners and rules 
-[asgmt-2-ALB Listeners and rules ](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ALB-Listeners%20and%20rules.png)
+![asgmt-2-ALB Listeners and rules ](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ALB-Listeners%20and%20rules.png)
 
 ### Target groups and Health check
 ![asgmt-2-Tg](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-Tg.png)
