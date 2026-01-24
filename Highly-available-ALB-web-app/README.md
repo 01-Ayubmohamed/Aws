@@ -12,7 +12,7 @@ Created a VPC (10.0.0.0/16)
 4 subnets, 2 public, 2 private  
 A Route table 
 A zonal NAT gateway and Internet Gateway 
-[asgmt-2-VPC Resource map](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-VPC%20Resource%20map.png)
+![asgmt-2-VPC Resource map](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-VPC%20Resource%20map.png)
 
 2. EC2 Instances & Auto Scaling Group 
 Launch two EC2 instances in the same VPC, in different Availability Zones.  
@@ -22,10 +22,10 @@ Once the web is validated, I configure a Launch template and an Auto Scaling Gro
 The Auto Scaling Group maintains a minimum of 2 instances and can scale up to 4
 based on demand.
 ### EC2 instances and ASG instances.  
-[asgmt-2-](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2%20&%20ASG%20instances.png)
+![asgmt-2-](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2%20&%20ASG%20instances.png)
 
 ### ASG 
-[asgmt-2-ASG](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ASG.png)
+![asgmt-2-ASG](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ASG.png)
 
 3. Set Up the ALB
 Create an ALB in two public subnets
@@ -37,7 +37,7 @@ Configure a health check on the root path /, showing all instnaces health status
 [asgmt-2-ALB Listeners and rules ](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ALB-Listeners%20and%20rules.png)
 
 ### Target groups and Health check
-[asgmt-2-Tg](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-Tg.png)
+![asgmt-2-Tg](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-Tg.png)
 
 
 4. Security Groups
@@ -47,10 +47,10 @@ ALB-SG	HTTP(80)	0.0.0.0/0
 ALB -SG	HTTPS(433)	0.0.0.0/0
 EC2-SG	HTTP(80)	ALB-SG
 ### Application Load Balancer Security Group 
-[asgmt-2-ALB](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ALB-SG.png)
+![asgmt-2-ALB](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ALB-SG.png)
 
 ### EC2 Security Group  
-[asgmt-2-EC2-SG](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2-SG.png)
+![asgmt-2-EC2-SG](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2-SG.png)
 
 6. Route 53 and AWS Certificate Manager (ACM)
 Buy a domain on a Hosted Zone via Route 53 
@@ -58,23 +58,23 @@ Launch an ACM for the designated domain
 Create an A record for the root domain and assign the route traffic value towards the ALB domain. 
 
 ### Route 53 Domain 
-[asgmt-2-Route53-DNS](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-Route53-DNS.png)
+![asgmt-2-Route53-DNS](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-Route53-DNS.png)
 
 ### AWS Certificate Manager 
-[asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ACM.png)
+![asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ACM.png)
 
 5. Testing
 Visit the ALB DNS name
 Refresh to verify traffic alternates between all instances EC2 A, B and ASG    
 ### EC2 instance A web test 
-[asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2%20instance%20A-web.png)
+![asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2%20instance%20A-web.png)
 
 ### EC2 instance B web test 
-[asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2%20instance%20B-web.png)
+![asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-EC2%20instance%20B-web.png)
 
 
 ### ASG web test 
-[asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ASG-web.png)
+![asgmt-2-ACM](/Highly-available-ALB-web-app/asgmt-2-screenshots/asgmt-2-ASG-web.png)
 
 ## Traffic flow 
 User --> Route 53 --> ALB -->  Target group --> EC2 instances. 
