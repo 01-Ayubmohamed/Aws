@@ -1,10 +1,11 @@
 #!/bin/bash 
-yum isntall -y httpd
+yum install -y httpd    
 systemctl start httpd
 systemctl enable httpd  
-echo "<h1>Hello Ayub this in instance EC2 A</h1>" > /var/www/html/index.html
+echo "<h1>Hello Ayub, this is instance EC2 A</h1>" > /var/www/html/index.html   
 
-#!/bin/bash Application-Load-Balancer/userdata
+
+#!/bin/bash 
 yum install -y httpd    
 systemctl start httpd
 systemctl enable httpd  
@@ -14,4 +15,5 @@ echo "<h1>Hello Ayub, this is instance EC2 B</h1>" > /var/www/html/index.html
 yum install -y httpd    
 systemctl start httpd
 systemctl enable httpd  
-echo "<h1>Hello Ayub, this is Auto Scaling instance </h1>" > /var/www/html/index.html
+echo "<h1>Hello Ayub, this is Auto Scaling Group</h1>" > /var/www/html/index.html   
+
